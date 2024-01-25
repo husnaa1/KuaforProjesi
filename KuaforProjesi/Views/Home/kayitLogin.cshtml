@@ -1,0 +1,161 @@
+﻿
+
+
+<div class="row" style="background-color: #a9a9a91a ">
+    <div class="col">
+        <img class="imgKayit" src="~/css/kayitSayfasi/post.png" />
+    </div>
+
+    <div class="col" id="kayitÖnyüz">
+        <div class="login">
+            <h2 id="login1">BERBER SALONUMUZUN ÜYELİK SAYFASINA HOŞGELDİNİZ </h2>
+
+        </div>
+
+        <div class="row">
+            <div class="col" style="text-align:right;padding:50px">
+                <h5>
+                    ÜYE DEĞİL MİSİN ?
+                    <br />
+                    ÜYE OLMAK İÇİN TIKLA !
+                </h5>
+                <br />
+                <div>
+                    <button type="button" class="btn btn-primary mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #40338b; border-color: #0e3b7e; border-radius: 1em ">
+                        <i class="bi bi-person-fill-add"></i>
+                        MÜŞTERİ OLARAK KAYIT OL
+                    </button>
+                </div>
+            </div>
+
+            <div class="col" style="text-align:left; padding: 45px">
+                <h5>
+                    ÜYE  MİSİN ?
+                    <br />
+                    GİRİŞ YAPMAK İÇİN TIKLA !
+                </h5>
+                <br />
+                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="background-color: #40338b; border-color: #0e3b7e; border-radius: 1em " >
+                    <i class="bi bi-person-fill-add"></i>
+                    MÜŞTERİ OLARAK GİRİŞ YAP
+                </button>
+
+                <br />
+                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="background-color: #40338b; border-color: #0e3b7e; border-radius: 1em ">
+                    <i class="bi bi-person-fill-add"></i>
+                    YÖNETİCİ OLARAK GİRİŞ YAP
+                </button>
+
+            </div>
+        </div>
+
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="Error">@ViewBag.Error</div>
+        }
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <i class="bi bi-person-fill-add"></i>
+                            KAYIT OL
+                        </h5>
+
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="Index" method="post">
+                            <input type="hidden" name="Kisi_ID" />
+                            <input type="text" placeholder="Ad" class="form-control mb-3" name="Kisi_Name" />
+                            <input type="text" placeholder="Soyad" class="form-control mb-3" name="Kisi_Soyad" />
+                            <input type="text" placeholder="Kullanıcı Adı" class="form-control mb-3" name="Kisi_KulAd" />
+                            <input type="text" placeholder="Şifre" class="form-control mb-3" name="Kisi_Sifre" />
+                            <button class="btn btn-success" type="submit" style="background-color: #0d6efd; border-color: #0d6efd ">
+                                <i class="bi bi-check-circle"></i>
+                                KAYIT OL
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <i class="bi bi-person-fill-add"></i>
+                            MÜŞTERİ GİRİŞİ
+                        </h5>
+
+
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="Login">
+                            <input type="hidden" name="Kisi_ID" />
+                            <input type="text" placeholder="Kullanıcı Adı" class="form-control mb-3" name="Kisi_KulAd" />
+                            <input type="text" placeholder="Şifre" class="form-control mb-3" name="Kisi_Sifre" />
+                            <button class="btn btn-success" type="submit" style="background-color: #0d6efd; border-color: #0d6efd">
+                                <i class="bi bi-check-circle"></i>
+                                GİRİŞ
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            <i class="bi bi-person-fill-add"></i>
+                            YÖNETİCİ GİRİŞİ
+                        </h5>
+
+
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="LoginManager">
+                            <input type="hidden" name="Kisi_ID" />
+                            <input type="text" placeholder="Kullanıcı Adı" class="form-control mb-3" name="Kisi_KulAd" />
+                            <input type="text" placeholder="Şifre" class="form-control mb-3" name="Kisi_Sifre" />
+                            <button class="btn btn-success" type="submit"style="background-color: #0d6efd; border-color: #0d6efd">
+                                <i class="bi bi-check-circle"></i>
+                                GİRİŞ
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4 id="login2">RANDEVU ALABİLMEK İÇİN KAYIT OLMANIZ GEREKMEKTEDİR</h4>
+
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+
+</script>

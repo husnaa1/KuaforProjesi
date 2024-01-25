@@ -1,0 +1,292 @@
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }*@
+
+@*<img class="img3" src="~/css/index/RESİM.png" />*@
+
+@*<div>
+
+    <button type="button" class="btn btn-primary mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-person-fill-add"></i>
+            KAYIT OL
+        </button>
+
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <i class="bi bi-person-fill-add"></i>
+                        KAYIT OL
+                    </h5>
+
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="Index" method="post">
+                        <input type="hidden" name="Kisi_ID" />
+                        <input type="text" placeholder="Ad" class="form-control mb-3" name="Kisi_Name" />
+                        <input type="text" placeholder="Soyad" class="form-control mb-3" name="Kisi_Soyad" />
+                        <input type="text" placeholder="Kullanıcı Adı" class="form-control mb-3" name="Kisi_KulAd" />
+                        <input type="text" placeholder="Şifre" class="form-control mb-3" name="Kisi_Sifre" />
+                        <button class="btn btn-success" type="submit">
+                            <i class="bi bi-check-circle"></i>
+                            KAYIT OL
+                        </button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+
+
+
+
+
+
+
+@*<div class="anaSayfa">
+
+    <div class="anaSayfaSol">
+        <video width="600" height="600" autoplay="autoplay">
+            <source src="~/css/anasayfa/video.mp4" type="video/mp4" />
+            <div style="clear: both"></div>
+    </div>
+    <div class="anaSayfaSag">
+
+        <img class="img1" src="~/css/anasayfa/onyuz.png" />
+
+    </div>
+
+
+    <div style="clear: both"></div>
+    </div>*@
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>-->
+@*<div>
+
+        <table class="table table-striped table-hover">
+
+            <tr class="table1">
+
+                <td>Müşteri ID</td>
+                <td>Müşteri Ad</td>
+                <td>Müşteri ID</td>
+                <td>Müşteri ID</td>
+                <td>Müşteri ID</td>
+
+            </tr>
+
+            @foreach (var iteme in ViewBag.Kisiler as List<Kisiler>)
+            {
+
+
+                <tr class="table">
+
+                    <td>@iteme.Kisi_ID</td>
+                    <td>@iteme.Kisi_Name</td>
+                    <td>@iteme.Kisi_Soyad</td>
+                    <td>@iteme.Kisi_KulAd</td>
+                    <td>@iteme.Kisi_Sifre</td>
+
+                </tr>
+            }
+
+        </table>
+
+    </div>*@
+
+@*db den kişi getiren kod*@
+<!--<table class="table table-striped table-hover">
+
+        @foreach (var nesne in ViewBag.KisiListe as List<Kisiler>)
+        {
+
+            <tr>
+
+                <td>@nesne.Kisi_Name</td>
+                <td>@nesne.Kisi_Soyad</td>
+                <td>@nesne.Kisi_KulAd</td>
+
+
+                <td><a class="btn btn-info" asp-action="Kisi_Guncelle" asp-route-id="@nesne.Kisi_ID">Kişi Güncelle</a></td>
+
+            </tr>
+        }
+
+    </table>
+
+
+    <h2>Animated Accordion</h2>
+    <p>Click on the buttons to open the collapsible content.</p>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>-->
+@*</html>*@
+
+
+<div class="row">
+
+
+    <h3></h3>
+
+
+
+</div>
+
+
+
+<div>
+    <h1 class="iletisim">İSTANBUL'UN EN İYİ ERKEK KUAFÖRÜ</h1>
+</div>
+<hr />
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <p>Sanata kendini adamış bir erkek kuaförü olan Berber Salonu,2021 yılında Andolu yakasında  temellerini attığı salonunu 3 yıl boyunca burada faaliyetini sürdürmüştür.</p>
+        <p> İyi bir erkek kuaförü olduğunu kanıtlayan Berber Salonu, konukları otopark sorunu  yaşamaya başladığı için salonunu, Erenköy'de otoparkı önünde olan müstakil bir yapıya taşıyarak, salonunun fiziki şartlarını daha olumlu hale getirmiştir.</p>
+        <p> Üç yılını burada dolduranBerber Salonu, 200 m2lik salonunu geliştirip,  cilt-kozmetik, el-ayak bakım ve styles danışmanı olarak futbolculara siyasetçilere ve sanatçılara hizmet vermektedir...</p>
+
+    </div>
+    <div class="col"></div>
+</div>
+<div class="row">
+    <img class="img3" src="~/css/index/pin2.png" />
+
+</div>
+<div style="margin-top:10vh">
+    <h5 class="iletisim">KUAFÖRÜMÜZ RANDEVUSUZ HİZMET VERMEMEKTEDİR</h5>
+</div>
+<hr />
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <p> Sayfamıza kayıt olarak ve giriş yaparak randevunuzu oluşturabilirsiniz.</p>
+    </div>
+    <div class="col"></div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col" style="margin-left:15vh ; margin-top:4vh">
+        <h3>Ayrıcalıklarımız</h3>
+        <hr />
+        <h4>Eksiksiz Hizmet</h4>
+        <h4>Üst Düzey Rahatlık</h4>
+        <h4>Modaya Bağlılık</h4>
+        <h4>Samimiyet, Sevgi ve Güvene Dayalı Müşteri İlişkileri</h4>
+        <h4>Yüzde Yüz Hijyen ve Gelişmiş Ekipmanlar</h4>
+        <h4>Sınır Tanımayan Kalite</h4>
+
+
+        <div style="margin-top:10vh">
+          
+            <button type="button" class="btn btn-primary mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #40338b; border-color: #0e3b7e; border-radius: 1em ;width:40vh;height:6vh">
+                <i class="bi bi-person-fill-add"></i>
+               
+                RANDEVU AL
+            </button>
+        </div>
+    </div>
+
+    <div class="col">
+        <img class="img5" style="height:60vh ; margin-right:40vh !important" src="~/css/index/Brown Barbershop Promotion Instagram Post.png" />
+    </div>
+</div>
+
+
+<div>
+    <h1 class="iletisim">MARKALARIMIZ</h1>
+</div>
+<hr />
+
+<div class="row" style="margin-top:7vh">
+    <div class="col">
+        <img class="img5" src="~/css/index/Schwarzkopf-logo.jpg" style="width:30vh;height:15vh;margin-left:15vh" />
+    </div>
+
+    <div class="col">
+        <img class="img5" src="~/css/index/wella5357.jpg" style="width:30vh;height:15vh"/> 
+    </div>
+    <div class="col">
+        <img class="img5" src="~/css/index/LOreal-Symbol (1).jpg" style="width:30vh;height:15vh" />   
+    </div>
+
+    <div class="col">
+        <img class="img5" src="~/css/index/indir (1).png" style="width:30vh;height:15vh;margin-right:15vh" /> 
+    </div>
+</div>
+<hr />

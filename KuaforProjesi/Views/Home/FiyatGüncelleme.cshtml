@@ -1,0 +1,23 @@
+﻿@model KuaforProjesi.Models.Fiyat
+@{
+    ViewData["Title"] = "Fiyat_Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Fiyat Güncelleme</h1>
+
+<form asp-action="FiyatGüncelleme" method="post">
+
+    <input type="form-control mb-2" asp-for="@Model.tbl_ID" />
+    <input type="form-control mb-2" asp-for="@Model.hizmet" />
+    <input type="form-control mb-2" asp-for="@Model.fiyat" />
+
+
+
+    <button class="btn btn-info" type="submit">Fiyat Güncelle</button>
+
+
+</form>
+
+
+

@@ -1,0 +1,383 @@
+html {
+    font-size: 14px;
+   // background-color: #f9f9f9;
+  
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        background-color: #f9f9f9;
+    }
+}
+
+html {
+    position:center;
+    min-height: 100%;
+   
+}
+
+body {
+    /*background-image: url('Backgraound/1.png');*/
+    background-size: cover;
+    /* background-image: url('headerBG/back.png');*/
+    background-color: #a9a9a914;
+}
+
+
+header {
+    /*background-image: transparent;*/
+    /*background-image:url('headerBG/header.png');*/
+    /*background-image:url('headerBG/back.png');*/
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+.nav-link {
+    
+    font-family: Helvetica;
+    text-decoration: none;
+    color: black;
+}
+.h1 {
+    color:black;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    font-family: "Verdana";
+    font-size:35px;
+}
+.p1{
+    margin-top:20px;
+    font-family:monospace;
+    font-size:larger;
+}
+.hakkimizdaAna {
+    width: 1700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.hakkimizdaAnaSol {
+    width: 800px;
+    height: 500px;
+    float: left;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: 1.9;
+    font-size: 18px;
+    
+}
+
+
+.hakkimizdaAnaSag {
+    width: 900px;
+    height: 600px;
+    float: left;
+    
+}
+.img1{
+
+    
+}
+.sol_menu1{
+    background-color:aquamarine;
+
+}
+.sag_menu1{
+    background-color:chartreuse;
+}
+.nav-link {
+    color:dimgray;
+    font-size:medium;
+    letter-spacing: -1px;
+
+    
+}
+
+.İletisimAna {
+    width: 1700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.İletisimAnaSol {
+    width: 900px;
+    height: 500px;
+    float: left;
+    font-weight: 200;
+    line-height: 32px;
+    font-size: 16px;
+    font-family: "Verdana";
+}
+
+.İletisimAnaSag {
+    width: 800px;
+    height: 600px;
+    float: left;
+}
+
+.img2 {
+    width: 800px;
+    height: 600px;
+}
+.h2 {
+    color: black;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    font-family: "Verdana";
+    font-size: 35px;
+}
+.img3{
+    font-size:25px;
+   
+}
+.anaSayfa {
+    width: 1700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.anaSayfaSol {
+    width: 800px;
+    float: left;
+    font-weight: 200;
+    line-height: 32px;
+    font-size: 16px;
+    font-family: "Verdana";
+}
+
+.anaSayfaSag {
+    width: 900px;
+    height: 600px;
+    float: left;
+}
+.h1 {
+    font-family: Prata;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 40px;
+    color: #000000;
+}
+.logo {
+    height: 75px;
+    margin-left:60px;
+   
+}
+
+/*footer {
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color:white;
+    color: khaki;
+}*/
+
+.hizmetlerimiz {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 3.5em;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+}
+.col {
+    text-align: center;
+    font-family: "Verdana";
+    letter-spacing: -1px;
+    margin-bottom:20px;
+    width:30%;
+    
+}
+.img3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+   
+}
+.hizmetlerimiz2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 3em;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+    margin-left:50px;
+   
+}
+.A {
+    height: 320px;
+    margin-left:320px;
+    margin-top:20px;
+   
+  
+}
+.B {
+    margin-left: 330px;
+    font-size: 1em;
+    font-family: "Verdana";
+    letter-spacing: -1px;
+    font-weight:600;
+    margin-top:20px;
+    
+  
+}
+.row{
+    margin-bottom:20px;
+    
+}
+.C{
+    margin-left:220px;
+}
+.iletisim {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 3.5em;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+}
+.randevu {
+    background-color:black;
+    border-radius:0.2em;
+    margin-left:20px;
+}
+.login {
+    text-align: center;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+#dropdown {
+    color:dimgray;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 4px;
+    border-color: #D3D3D3;
+}
+.imgKayit {
+    margin-top: 50px;
+    height:700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#kayitÖnyüz {
+    margin-top: 50px;
+    background-color: #a9a9a914;
+    border-radius: 20px;
+    color: #363636;
+}
+#login1 {
+    font-size: 2.7em;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+    margin-top:100px;
+}
+#login2 {
+    font-size: 1em;
+    font-family: "Verdana";
+    letter-spacing: -1px;
+}
+.Error {
+    background-color: #e39c9c;
+    width: 500px;
+    color: #e30404;
+    text-align: center;
+    border-radius: 3em;
+    margin-left: 200px;
+}
+.modal-content {
+    background-color: #f5fbff;
+    width: 100%;
+    margin-top: 205px;
+    
+}
+#fiyat {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+    color: rgb(38, 33, 33);
+    margin-left: 35vh;
+    margin-right: 35vh;
+    color: #363636;
+    background-color: #e7e6e6;
+}
+.fiyatList {
+    /* margin-top: 1vh !important;*/
+    /*margin-left: 30vh;
+    margin-right: 15vh;
+    letter*//*-spacing: -3px;*/
+}
+.D {
+    /*background-image: transparent;*/
+    /*background-image:url('headerBG/header.png');*/
+/*    background-image: url('index/RESİM.png');
+    background-image-opacity: 0.6;*/
+    
+}
+.fiyatList2 {
+    /* margin-top: 1vh !important;*/
+    /*margin-left: 4vh;
+    margin-right: 15vh;
+    letter-spacing: -1px;*/
+}
+.acordion1 {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+}
+.accordion {
+    font-family: "Verdana";
+    letter-spacing: -1px;
+    font-size: medium;
+    margin-bottom:20px;
+}
+.panel {
+    color: #064c93;
+    
+  
+}
+.bod{
+    height:1500px;
+}
+.YoneticiMainPage{
+    margin-left:20vh;
+    margin-right:20vh;
+    margin-top:10vh;
+}
+.YoneticiMainPage1 {
+  
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: "Verdana";
+    letter-spacing: -3px;
+    text-align:center;
+}
+.table {
+    height: 10vh;
+    text-align: center;
+    background-color: #f3e7ff;
+    color: #43027e;
+    
+}
+.table1{
+  background-color:thistle;
+   
+}
+.Yorum{
+
+    
+
+}
+#div6{
+ 
+}

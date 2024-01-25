@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "İletisim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h1 class="iletisim">İletişim</h1>
+</div>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">Her türlü öneri,görüş,şikayet ve istekleriniz için bize ulaşabilirsiniz.</div>
+    <div class="col"></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <h1>Adres</h1>
+        <p><i class="bi bi-geo-alt"></i> ERENKÖY, BAĞDAT CAD. ÇUBUKÇU APT. NO:333/1 KADIKÖY/İSTANBUL</p>
+    </div>
+    <div class="col">
+        <h1>Telefon</h1> <p><i class="bi bi-telephone-inbound"></i> +90 (0216) 999 00 00</p>
+    </div>
+    <div class="col">
+        <h1>E-Posta</h1>
+        <p><i class="bi bi-envelope-at"></i> berbersalonu@gmail.com</p>
+    </div>
+    <div class="col"></div>
+</div>
+
+<img class="img3" src="~/css/NewFolder1/Hizmetlerimiz.png" />
+
+<div>
+    <h1 class="iletisim">Bize Ulaşın</h1>
+</div>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">Görüşlerinizi bildirmek için aşağıdaki formu doldurarak bize ulaşabilirsiniz.</div>
+    <div class="col"></div>
+</div>
+<hr>
+
+<div class="row" >
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" ></div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6" >
+    <form asp-action="Yorum" method="post">
+    <input type="hidden" name="Yorum_ID" />
+    <input type="text" placeholder="İsim" class="form-control mb-3" name="Yorum_Ad" style="width:70vh ; height:6vh" />
+    <input type="text" placeholder="E-posta" class="form-control mb-3" name="Yorum_Eposta" style="width: 70vh; height: 6vh" />
+    <input type="text" placeholder="Konu" class="form-control mb-3" name="Yorum_Konu" style="width: 80vh; height: 6vh" />
+    <input type="text" placeholder="Mesaj" class="form-control mb-3" name="Yorum_Mesaj" style="width: 100vh; height: 20vh" />
+    <button class="btn btn-success" type="submit" style="background-color: #40338b; border-color: #0e3b7e; margin-left: 45vh " >
+        <i class="bi bi-check-circle"></i>
+        GÖNDER
+    </button>
+</form>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3" ></div>
+</div>
+
+
+
+

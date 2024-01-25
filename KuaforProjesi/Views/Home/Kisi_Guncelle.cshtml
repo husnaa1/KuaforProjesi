@@ -1,0 +1,23 @@
+﻿@model KuaforProjesi.Models.Kisiler
+@{
+    ViewData["Title"] = "Kisi_Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1> Güncelleme</h1>
+
+<form asp-action="Kisi_Guncelle" method="post">
+
+    <input type="hidden" asp-for="@Model.Kisi_ID" />
+    <input type="form-control mb-2" asp-for="@Model.Kisi_Name" />
+    <input type="form-control mb-2" asp-for="@Model.Kisi_Soyad" />
+    <input type="form-control mb-2" asp-for="@Model.Kisi_KulAd" />
+    <input type="form-control mb-2" asp-for="@Model.Kisi_Sifre" />
+
+
+
+    <button class="btn btn-info" type="submit">Kişi Güncelle</button>
+
+
+</form>
+

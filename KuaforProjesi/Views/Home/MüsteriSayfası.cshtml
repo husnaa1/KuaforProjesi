@@ -1,0 +1,90 @@
+﻿
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class="bi bi-person-fill-add"></i>
+                    RANDEVU AL
+                </h5>
+
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="RandevuAl" method="post">
+                    <input type="hidden" name="Randevu_ID" />
+                    <input type="text" placeholder="Adınız" class="form-control mb-3" name="Randevu_KisiAd" />
+                    <input type="text" placeholder="Soyadınız" class="form-control mb-3" name="Randevu_KisiSoyad" />
+
+
+                    <select id="dropdown" name="Randevu_İcerigi">
+                        <option value="" selected disabled hidden>Almak istediğiniz hizmeti seçiniz</option>
+                        <option value="Kesim"> Kesim</option>
+                        <option value="Renklendirme">Renklendirme</option>
+                        <option value="Şekillendirme">Şekillendirme</option>
+                        <option value="Damat Paketi">Damat Paketi</option>
+                        <option value="Erkek Kişisel Bakım">Erkek Kişisel Bakım</option>
+                    </select>
+
+                    <select id="dropdown" name="Randevu_Personel">
+                        <option value="" selected disabled hidden>Hizmet almak istediğiniz personeli seçiniz</option>
+                        <option value="Fatma Hüsna KILIÇ">Fatma Hüsna KILIÇ</option>
+                        <option value="Ali KORKMAZ">Ali KORKMAZ</option>
+                    </select>
+
+                    <input type="date" placeholder="Randevu Tarihi" class="form-control mb-3" name="Randevu_Tarihi" />
+
+                    <input type="time" placeholder="Randevu Saati" class="form-control mb-3" name="Randevu_Saati" />
+
+                    <select id="dropdown" name="Odeme_Turu" style="margin-bottom:80px">
+                        <option value="" selected disabled hidden>Ödeme türünü seçiniz</option>
+                        <option value="Nakit">Nakit</option>
+                        <option value="Kredi Kartı">Kredi Kartı</option>
+                        <option value="EFT/Havale/FAST">EFT/Havale/FAST</option>
+                    </select>
+
+
+                    <button class="btn btn-success" type="submit" style="background-color: #0d6efd; border-color: #0d6efd">
+                        <i class="bi bi-check-circle"></i>
+                        RANDEVU AL
+                    </button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1 class="hizmetlerimiz">Randevu</h1>
+</div>
+<hr />
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">Randevu Sayfasına Hoş Geldiniz.İstediğiniz tarih ve saate randevu oluşturabilirsiniz.Ayrıca personel seçimi de yapabilirsiniz.Hemen Randevu oluşturmaya başlayın.</div>
+    <div class="col"></div>
+</div>
+<div>
+
+</div>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <button type="button" class="btn btn-primary mb-3 " data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color:forestgreen ;border-color:darkgreen">
+            <i class="bi bi-person-fill-add"></i>
+            RANDEVU AL
+        </button>
+    </div>
+    <div class="col"></div>
+</div>
+<hr />
+<div style="height:45vh">
+
+
+</div>

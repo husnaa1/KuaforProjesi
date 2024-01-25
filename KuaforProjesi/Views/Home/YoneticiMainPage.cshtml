@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div style="height:750px">
+    <div class="YoneticiMainPage1">
+        <h2>Yönetici Sayfası</h2>
+        <h3>Randevular</h3>
+
+
+    </div>
+
+
+    <div class="YoneticiMainPage">
+
+        <table class="table table-striped table-hover">
+
+            <tr class="table1">
+                <td>Müşteri Adı</td>
+                <td>Müşteri Soyası</td>
+                <td>Randevu Türü</td>
+                <td>Randevu Tarihi</td>
+                <td>Randevu Saati</td>
+                <td>Odeme Türü</td>
+                <td>Personel Seçimi </td>
+                <td>Onayla</td>
+                <td>Sil </td>
+            </tr>
+
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+
+
+            @foreach (var item in ViewBag.RandevuListe as List<Randevu>)
+            {
+
+
+                <tr class="table">
+
+                    <td>@item.Randevu_KisiAd</td>
+                    <td>@item.Randevu_KisiSoyad</td>
+                    <td>@item.Randevu_İcerigi</td>
+                    <td>@item.Randevu_Tarihi</td>
+                    <td>@item.Randevu_Saati</td>
+                    <td>@item.Odeme_Turu</td>
+                    <td>@item.Randevu_Personel</td>
+                    <td><a class="btn btn-outline-warning" asp-action="Randevu_Sil" asp-route-id="@item.Randevu_ID">Onayla</a></td>
+                    <td><a class="btn btn-outline-danger" asp-action="Randevu_Sil" asp-route-id="@item.Randevu_ID">Sil</a></td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
